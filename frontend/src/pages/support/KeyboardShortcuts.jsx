@@ -13,7 +13,6 @@ import {
   Settings,
   Command,
   Option,
-  Shift,
   ArrowUp,
   ArrowDown,
   ArrowLeft,
