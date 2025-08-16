@@ -3,51 +3,8 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 
-// Marketing & Public Pages
-import Home from "./pages/marketing/Home";
-import About from "./pages/marketing/About";
-import HowItWorks from "./pages/marketing/HowItWorks";
-import GettingStarted from "./pages/marketing/GettingStarted";
-import Roadmap from "./pages/marketing/Roadmap";
-import ReleaseNotes from "./pages/marketing/ReleaseNotes";
-
-// Core App Pages
-import Dashboard from "./pages/app/Dashboard";
-import MarketOverview from "./pages/app/MarketOverview";
-import StockScanner from "./pages/app/StockScanner";
-import Watchlist from "./pages/app/Watchlist";
-import EnhancedWatchlist from "./pages/app/EnhancedWatchlist";
-import Portfolio from "./pages/app/Portfolio";
-import StockLookup from "./pages/app/StockLookup";
-import News from "./pages/app/News";
-import PersonalizedNews from "./pages/app/PersonalizedNews";
-
-// Account Pages
-import Account from "./pages/account/Account";
-import UserSettings from "./pages/account/UserSettings";
-import BillingHistory from "./pages/account/BillingHistory";
-import PremiumPlans from "./pages/account/PremiumPlans";
-import ComparePlans from "./pages/account/ComparePlans";
-
-// Payment Pages
-import PayPalCheckout from "./pages/payment/PayPalCheckout";
-import PaymentSuccess from "./pages/payment/PaymentSuccess";
-import PaymentCancelled from "./pages/payment/PaymentCancelled";
-
-// Auth Pages
-import Login from "./pages/auth/Login";
-import Signup from "./pages/auth/Signup";
-
-// Support Pages
-import HelpCenter from "./pages/support/HelpCenter";
-import FAQ from "./pages/support/FAQ";
-import Glossary from "./pages/support/Glossary";
+// Support Pages (testing with just one working page first)
 import KeyboardShortcuts from "./pages/support/KeyboardShortcuts";
-
-// Legal Pages
-import Privacy from "./pages/legal/Privacy";
-import Terms from "./pages/legal/Terms";
-import Security from "./pages/legal/Security";
 import Accessibility from "./pages/legal/Accessibility";
 import CookiePolicy from "./pages/legal/CookiePolicy";
 
