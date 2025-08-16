@@ -3,234 +3,30 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 
-// Support Pages (testing with just one working page first)
+// Support Pages (testing with minimal imports first)
 import KeyboardShortcuts from "./pages/support/KeyboardShortcuts";
-import Accessibility from "./pages/legal/Accessibility";
-import CookiePolicy from "./pages/legal/CookiePolicy";
-
-// System Pages
-import Status from "./pages/system/Status";
-import MarketHours from "./pages/system/MarketHours";
-import Sitemap from "./pages/system/Sitemap";
-
-// Contact
-import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
         <Routes>
-          {/* Marketing & Public Pages (no sidebar) */}
-          <Route path="/" element={
-            <MainLayout showSidebar={false}>
-              <Home />
-            </MainLayout>
-          } />
-          <Route path="/about" element={
-            <MainLayout showSidebar={false}>
-              <About />
-            </MainLayout>
-          } />
-          <Route path="/how-it-works" element={
-            <MainLayout showSidebar={false}>
-              <HowItWorks />
-            </MainLayout>
-          } />
-          <Route path="/getting-started" element={
-            <MainLayout showSidebar={false}>
-              <GettingStarted />
-            </MainLayout>
-          } />
-          <Route path="/roadmap" element={
-            <MainLayout showSidebar={false}>
-              <Roadmap />
-            </MainLayout>
-          } />
-          <Route path="/release-notes" element={
-            <MainLayout showSidebar={false}>
-              <ReleaseNotes />
-            </MainLayout>
-          } />
-
-          {/* Auth Pages (no sidebar) */}
-          <Route path="/login" element={
-            <MainLayout showSidebar={false}>
-              <Login />
-            </MainLayout>
-          } />
-          <Route path="/signup" element={
-            <MainLayout showSidebar={false}>
-              <Signup />
-            </MainLayout>
-          } />
-
-          {/* Core App Pages (with sidebar) */}
-          <Route path="/dashboard" element={
-            <MainLayout>
-              <Dashboard />
-            </MainLayout>
-          } />
-          <Route path="/market-overview" element={
-            <MainLayout>
-              <MarketOverview />
-            </MainLayout>
-          } />
-          <Route path="/scanner" element={
-            <MainLayout>
-              <StockScanner />
-            </MainLayout>
-          } />
-          <Route path="/watchlist" element={
-            <MainLayout>
-              <Watchlist />
-            </MainLayout>
-          } />
-          <Route path="/enhanced-watchlist" element={
-            <MainLayout>
-              <EnhancedWatchlist />
-            </MainLayout>
-          } />
-          <Route path="/portfolio" element={
-            <MainLayout>
-              <Portfolio />
-            </MainLayout>
-          } />
-          <Route path="/stock-lookup" element={
-            <MainLayout>
-              <StockLookup />
-            </MainLayout>
-          } />
-          <Route path="/news" element={
-            <MainLayout>
-              <News />
-            </MainLayout>
-          } />
-          <Route path="/personalized-news" element={
-            <MainLayout>
-              <PersonalizedNews />
-            </MainLayout>
-          } />
-
-          {/* Account Pages (with sidebar) */}
-          <Route path="/account" element={
-            <MainLayout>
-              <Account />
-            </MainLayout>
-          } />
-          <Route path="/user-settings" element={
-            <MainLayout>
-              <UserSettings />
-            </MainLayout>
-          } />
-          <Route path="/billing-history" element={
-            <MainLayout>
-              <BillingHistory />
-            </MainLayout>
-          } />
-          <Route path="/premium-plans" element={
-            <MainLayout>
-              <PremiumPlans />
-            </MainLayout>
-          } />
-          <Route path="/compare-plans" element={
-            <MainLayout>
-              <ComparePlans />
-            </MainLayout>
-          } />
-
-          {/* Payment Pages (no sidebar) */}
-          <Route path="/paypal-checkout" element={
-            <MainLayout showSidebar={false}>
-              <PayPalCheckout />
-            </MainLayout>
-          } />
-          <Route path="/payment-success" element={
-            <MainLayout showSidebar={false}>
-              <PaymentSuccess />
-            </MainLayout>
-          } />
-          <Route path="/payment-cancelled" element={
-            <MainLayout showSidebar={false}>
-              <PaymentCancelled />
-            </MainLayout>
-          } />
-
-          {/* Support Pages (no sidebar for public access) */}
-          <Route path="/help-center" element={
-            <MainLayout showSidebar={false}>
-              <HelpCenter />
-            </MainLayout>
-          } />
-          <Route path="/faq" element={
-            <MainLayout showSidebar={false}>
-              <FAQ />
-            </MainLayout>
-          } />
-          <Route path="/glossary" element={
-            <MainLayout showSidebar={false}>
-              <Glossary />
-            </MainLayout>
-          } />
-          <Route path="/keyboard-shortcuts" element={
+          {/* Test route for KeyboardShortcuts */}
+          <Route path="/support/keyboard-shortcuts" element={
             <MainLayout showSidebar={false}>
               <KeyboardShortcuts />
             </MainLayout>
           } />
-
-          {/* Legal Pages (no sidebar) */}
-          <Route path="/privacy" element={
+          
+          {/* Default route redirects to keyboard shortcuts for testing */}
+          <Route path="/" element={
             <MainLayout showSidebar={false}>
-              <Privacy />
-            </MainLayout>
-          } />
-          <Route path="/terms" element={
-            <MainLayout showSidebar={false}>
-              <Terms />
-            </MainLayout>
-          } />
-          <Route path="/security" element={
-            <MainLayout showSidebar={false}>
-              <Security />
-            </MainLayout>
-          } />
-          <Route path="/accessibility" element={
-            <MainLayout showSidebar={false}>
-              <Accessibility />
-            </MainLayout>
-          } />
-          <Route path="/cookie-policy" element={
-            <MainLayout showSidebar={false}>
-              <CookiePolicy />
-            </MainLayout>
-          } />
-
-          {/* System Pages (no sidebar) */}
-          <Route path="/status" element={
-            <MainLayout showSidebar={false}>
-              <Status />
-            </MainLayout>
-          } />
-          <Route path="/market-hours" element={
-            <MainLayout showSidebar={false}>
-              <MarketHours />
-            </MainLayout>
-          } />
-          <Route path="/sitemap" element={
-            <MainLayout showSidebar={false}>
-              <Sitemap />
-            </MainLayout>
-          } />
-
-          {/* Contact (no sidebar) */}
-          <Route path="/contact" element={
-            <MainLayout showSidebar={false}>
-              <Contact />
+              <KeyboardShortcuts />
             </MainLayout>
           } />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
