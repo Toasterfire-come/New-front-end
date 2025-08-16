@@ -131,7 +131,6 @@ const KeyboardShortcuts = () => {
     const keyIcons = {
       'Ctrl': Command,
       'Alt': Option,
-      'Shift': Shift,
       '↑': ArrowUp,
       '↓': ArrowDown,
       '←': ArrowLeft,
