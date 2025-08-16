@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainLayout from "./components/layout/MainLayout";
+import MainLayout from "./components/layout/MainLayout.jsx";
 
 // Support Pages (testing with minimal imports first)
 import KeyboardShortcuts from "./pages/support/KeyboardShortcuts";
